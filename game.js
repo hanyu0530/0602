@@ -41,16 +41,16 @@ const stars = Array.from({ length: 200 }, () => ({
 
 // 教育科技知識點
 const knowledgeItems = [
-    { name: "數位學習設計", points: 5, color: '#4CAF50', speed: 2, health: 1, isCorrect: true },
-    { name: "科技融入教學", points: 5, color: '#2196F3', speed: 3, health: 1, isCorrect: true },
-    { name: "學習分析", points: 5, color: '#9C27B0', speed: 2, health: 2, isCorrect: true },
-    { name: "互動式教材", points: 5, color: '#FF9800', speed: 4, health: 1, isCorrect: true },
-    { name: "AR/VR教育", points: 5, color: '#E91E63', speed: 2, health: 3, isCorrect: true },
-    { name: "死記硬背", points: -5, color: '#FF0000', speed: 3, health: 1, isCorrect: false },
-    { name: "填鴨式教學", points: -5, color: '#FF0000', speed: 4, health: 1, isCorrect: false },
-    { name: "機械式學習", points: -5, color: '#FF0000', speed: 2, health: 2, isCorrect: false },
-    { name: "被動學習", points: -5, color: '#FF0000', speed: 3, health: 1, isCorrect: false },
-    { name: "單向灌輸", points: -5, color: '#FF0000', speed: 2, health: 2, isCorrect: false }
+    { name: "資料庫設計", points: 5, color: '#4CAF50', speed: 2, health: 1, isCorrect: true },
+    { name: "系統分析設計", points: 5, color: '#2196F3', speed: 3, health: 1, isCorrect: true },
+    { name: "商業資料分析", points: 5, color: '#9C27B0', speed: 2, health: 2, isCorrect: true },
+    { name: "資訊安全管理", points: 5, color: '#FF9800', speed: 4, health: 1, isCorrect: true },
+    { name: "企業資源規劃", points: 5, color: '#E91E63', speed: 2, health: 3, isCorrect: true },
+    { name: "紙本手寫帳務管理", points: -5, color: '#FF0000', speed: 3, health: 1, isCorrect: false },
+    { name: "無系統化決策方式", points: -5, color: '#FF0000', speed: 4, health: 1, isCorrect: false },
+    { name: "忽略資安風險", points: -5, color: '#FF0000', speed: 2, health: 2, isCorrect: false },
+    { name: "未經需求分析開發", points: -5, color: '#FF0000', speed: 3, health: 1, isCorrect: false },
+    { name: "依賴單一人工流程", points: -5, color: '#FF0000', speed: 2, health: 2, isCorrect: false }
 ];
 
 // 特殊道具
@@ -86,31 +86,31 @@ const powerUpTypes = [
    
 ];
 
-// 教育科技問題庫
+// 資訊管理問題庫
 const questions = [
     {
-        question: "數位學習相較於傳統教學模式，其核心特性為何？",
-        options: ["以面對面互動為主", "藉由資訊科技促進自主與彈性學習", "完全依賴教師指導", "不需任何教學規劃"],
+        question: "資訊管理的核心目的主要在於？",
+        options: ["提升硬體設備效能", "整合資訊技術以支持組織決策與營運", "減少企業人力需求", "專注於程式語言開發本身"],
         correct: 1
     },
     {
-        question: "在教學設計理論中，課程設計的核心目的主要在於？",
-        options: ["提高學生標準化測驗成績", "系統化規劃教學活動以提升學習成效", "精簡教師教學時間與負擔", "增加作業以加強練習"],
+        question: "在企業導入資訊系統時，最重要的步驟通常是？",
+        options: ["先購買最新的硬體設備", "進行需求調查與系統分析", "不經需求分析直接開發", "忽略使用者回饋以節省成本"],
         correct: 1
     },
     {
-        question: "下列何者不屬於教育科技的應用範疇？",
-        options: ["數位教學內容開發", "教學管理與學習分析平台建置", "傳統粉筆黑板授課方式", "線上學習系統與互動模組設計"],
+        question: "下列何者不屬於資訊管理的典型應用範疇？",
+        options: ["企業資源規劃（ERP）", "供應鏈管理（SCM）", "傳統手寫帳冊管理方式", "顧客關係管理（CRM）"],
         correct: 2
     },
     {
-        question: "相較於傳統教材，數位教材的主要優勢為何？",
-        options: ["可完全取代教師授課", "具高互動性與多媒體整合能力", "製作過程不需專業知識", "完全不需網路或設備支援"],
+        question: "資料庫管理系統（DBMS）的主要優勢為何？",
+        options: ["使資料更不易共享", "提供資料整合、查詢與保護機制", "降低資料一致性", "完全不需資料備份"],
         correct: 1
     },
     {
-        question: "教育研究的目的是什麼？",
-        options: ["增加學校收入", "提高教師工資", "改進教育實踐", "減少學生數量"],
+        question: "企業進行資料分析（Data Analytics）的主要目的為？",
+        options: ["提升網路速度", "減少資料量", "改進企業決策與預測趨勢", "增加電腦耗電量"],
         correct: 2
     }
 ];
@@ -241,7 +241,7 @@ class Spaceship {
         ctx.font = `bold ${14 + (this.level - 1) * 2}px Arial`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText('TKU', 0, 0);
+        ctx.fillText('SCU', 0, 0);
 
         // 護盾效果 (大小隨等級變化)
         if (this.shield) {
