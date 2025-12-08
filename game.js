@@ -39,7 +39,7 @@ const stars = Array.from({ length: 200 }, () => ({
     brightness: Math.random() * 0.5 + 0.5
 }));
 
-// 教育科技知識點
+// 資訊管理知識點
 const knowledgeItems = [
     { name: "資料庫設計", points: 5, color: '#4CAF50', speed: 2, health: 1, isCorrect: true },
     { name: "系統分析設計", points: 5, color: '#2196F3', speed: 3, health: 1, isCorrect: true },
